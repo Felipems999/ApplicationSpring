@@ -2,6 +2,7 @@ package com.felipe.application.model;
 
 import java.io.Serializable;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -17,6 +18,7 @@ public class Usuario implements Serializable {
 	private String name;
 	private String email;
 	private String cpf_cnpj;
+	@Column(name = "tipousuario")
 	private String tipoUsuario;
 
 	public Long getId() {
