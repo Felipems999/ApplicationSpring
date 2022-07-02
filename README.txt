@@ -1,1 +1,2 @@
-MVC application using JAVA and Spring framework
+	---Aplicação web usando Java e Spring framework---
+	---Web application using JAVA and Spring framework---
