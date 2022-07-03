@@ -26,7 +26,7 @@ public class UsuariosController {
 		return mav;
 	}
 
-	@PostMapping
+	@PostMapping("/usuarios")
 	public String salvar(Usuario usuario) {
 		this.usuarios.save(usuario);
 		return "redirect:/usuarios";

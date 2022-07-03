@@ -8,16 +8,18 @@
 		integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 	</head>
 	<body>
-		<div style="content: center;" class="container-fluid">
+		<div style="content: center;" class="container">
 		
 			<div class="panel panel-default" style="margin: 10px">
 			
-				<div class="panel-heading">
-					<h1 style="position: center;" class="h1">Lista de Usuários</h1>
+				<div class="panel panel-heading row">
+					<h1 style="position: center;">Lista de Usuários</h1>
 				</div>
 				
-				<div class="panel-body">
+				<div class="panel panel-body row">
+					<form class="form form-inline"></form>
 					<table class="table table-sm table-bordered table-hover table-striped">
+					<caption>Lista de Usuários</caption>
 						<thead>
 							<tr class="thead-dark">
 								<th scope="col">ID</th>
@@ -26,6 +28,8 @@
 								<th scope="col">CPF/CNPJ</th>
 								<th scope="col">Tipo Cliente</th>
 							</tr>
+						</thead>
+						<tbody>
 							<tr th:each="usuario : ${usuarios}">
 								<td scope="row" th:text="${usuario.id}">id</td>
 								<td scope="row" th:text="${usuario.name}">nome</td>
@@ -33,7 +37,7 @@
 								<td scope="row" th:text="${usuario.cpf_cnpj}">cpf</td>
 								<td scope="row" th:text="${usuario.tipoUsuario}">tipo usuario</td>
 							</tr>
-						</thead>
+						</tbody>
 					</table>
 				</div>
 				
