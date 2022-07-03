@@ -19,14 +19,15 @@ public class UsuariosController {
 
 	@GetMapping
 	public ModelAndView listarUsuarios() {
-		ModelAndView mav = new ModelAndView("ListaUsuariosView");
+		ModelAndView modeView = new ModelAndView("ListaUsuariosView");
 
-		mav.addObject("usuarios", usuarios.findAll());
+		modeView.addObject("usuarios", usuarios.findAll());
+		modeView.addObject(new Usuario());
 
-		return mav;
+		return modeView;
 	}
 
-	@PostMapping("/usuarios")
+	@PostMapping
 	public String salvar(Usuario usuario) {
 		this.usuarios.save(usuario);
 		return "redirect:/usuarios";

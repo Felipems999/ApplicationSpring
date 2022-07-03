@@ -17,7 +17,15 @@
 				</div>
 				
 				<div class="panel panel-body row">
-					<form class="form form-inline"></form>
+					<form class="form form-inline" method="POST" th:object="${usuario}" th:action="@{/usuarios}" style="margin: 20px 0">
+						<div class="form-group">
+							<input type="text" class="form-control" placeholder="Nome" th:field="*{name}">
+							<input type="text" class="form-control" placeholder="E-mail" th:field="*{email}">
+							<input type="text" class="form-control" placeholder="CPF/CNPJ" th:field="*{cpf_cnpj}">
+							<input type="text" class="form-control" placeholder="Tipo Usuario" th:field="*{tipoUsuario}">
+							<button type="submit" class="btn btn-primary" value="Add">Adicionar</button>
+						</div>
+					</form>
 					<table class="table table-sm table-bordered table-hover table-striped">
 					<caption>Lista de Usuários</caption>
 						<thead>
@@ -26,7 +34,7 @@
 								<th scope="col">Nome</th>
 								<th scope="col">E-mail</th>
 								<th scope="col">CPF/CNPJ</th>
-								<th scope="col">Tipo Cliente</th>
+								<th scope="col">Tipo Usuario</th>
 							</tr>
 						</thead>
 						<tbody>
