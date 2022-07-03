@@ -14,9 +14,13 @@ public class Usuario implements Serializable {
 
 	@Id
 	@GeneratedValue
+	@Column(name = "id")
 	private Long id;
+	@Column(name = "nome")
 	private String name;
+	@Column(name = "email")
 	private String email;
+	@Column(name = "cpf_cnpj")
 	private String cpf_cnpj;
 	@Column(name = "tipousuario")
 	private String tipoUsuario;
