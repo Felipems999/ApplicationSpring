@@ -22,6 +22,10 @@ public class Usuario implements Serializable {
 	private String email;
 	@Column(name = "cpf_cnpj")
 	private String cpf_cnpj;
+	@Column(name = "sexo", nullable = true)
+	private String sexo;
+	@Column(name = "genero", nullable = true)
+	private String genero;
 	@Column(name = "tipousuario")
 	private String tipoUsuario;
 
